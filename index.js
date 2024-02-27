@@ -1,76 +1,83 @@
 const fs = require('fs');
-const inquirer = require('inquirer');
 
-//prompt questions for read me elements
-const questions = [
-    {
-        type: 'checkbox',
-        name: 'license',
-        choices: ["MIT", "UNLICENSED"],
-        message: 'Pick your License.'
-    },
-    {
-        type: 'input',
-        name: 'title',
-        message: 'What is the title of your project? (it should be self-explainable?)'
-    },
-    {
-        type: 'input',
-        name: 'description',
-        message: 'What does your project specifically do? Try to include context, links, features or background, what makes your project different than alternatives?'
-    },
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'what installations are required, list specific steps for beginners, include langauges or operating system, and especially any dependencies that need manual instalation'
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'What is a popular use case for this project?'
-    },
-    {
-        type: 'input',
-        name: 'Support',
-        message: 'Where can people go for help? Who can they reach out to?'
-    },
-    {
-        type: 'input',
-        name: 'Roadmap',
-        message: 'list the future possibilities for this projects growth'
-    },
-    {
-        type: 'checkbox',
-        name: 'contributions',
-        choices: ['yes', 'no'],
-        message: 'Are you open to contributions?'
-    },
-    {
-        type: 'input',
-        name: 'acknowledgement',
-        message: 'Please list those who contributed to this project'
-    },
-    {
-        type: 'radio',
-        name: 'projectStatus',
-        choices: ['yes', 'no'],
-        message: 'has developement slowed down or stopped completely?'
-    },
-];
+import('inquirer')
 
-inquirer.prompt(questions)
-    .then(answers => {
-        const badge = renderLicenseBadge(answers.license[0]); // selected license leads to badge
-        const markdownContent = generateMarkdown(answers, badge); //write to readme.md
-        fs.writeFile('./README.md', markdownContent, function (err) {
-            if (err) {
-                throw err;
-            }
-            console.log('README.md created successfully, now make it shine!')
+.then(({default: inquirer }) => {  // had to run default because of trouble initializing inquirer
+    const questions = [
+        //prompt questions for read me elements
+        {
+            type: 'checkbox',
+            name: 'license',
+            choices: ["MIT", "UNLICENSED"],
+            message: 'Pick your License.'
+        },
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of your project? (it should be self-explainable?)'
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'What does your project specifically do? Try to include context, links, features or background, what makes your project different than alternatives?'
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'what installations are required, list specific steps for beginners, include langauges or operating system, and especially any dependencies that need manual instalation'
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'What is a popular use case for this project?'
+        },
+        {
+            type: 'input',
+            name: 'Support',
+            message: 'Where can people go for help? Who can they reach out to?'
+        },
+        {
+            type: 'input',
+            name: 'Roadmap',
+            message: 'list the future possibilities for this projects growth'
+        },
+        {
+            type: 'checkbox',
+            name: 'contributions',
+            choices: ['yes', 'no'],
+            message: 'Are you open to contributions?'
+        },
+        {
+            type: 'input',
+            name: 'acknowledgement',
+            message: 'Please list those who contributed to this project'
+        },
+        {
+            type: 'radio',
+            name: 'projectStatus',
+            choices: ['yes', 'no'],
+            message: 'has developement slowed down or stopped completely?'
+        },
+    ];
+
+    inquirer.prompt(questions) 
+        .then(answers => {
+            const badge = renderLicenseBadge(answers.license[0]); // selected license leads to badge
+            const markdownContent = generateMarkdown(answers, badge); //write to readme.md
+            fs.writeFile('./README.md', markdownContent, function (err) {
+                if (err) {
+                    throw err;
+
+                }
+                console.log('README.md created successfully, now make it shine!')
+            });
         });
+})
+    .catch(err => {
+        console.log(err);
     });
-
-
+ 
+        
 function renderLicenseBadge(license) {
     let yourLicense = ''
     if (license === 'MIT') {
@@ -89,7 +96,8 @@ function generateMarkdown(answers, badge) {
     ## Description:  
     ${answers.description} 
 
-    ## Thank you, all who contributed! ${answers.acknowledgement} 
+    ## Thank you, all who contributed! 
+    ${answers.acknowledgement} 
 
     ### License: ${answers.license} ${badge}
 
