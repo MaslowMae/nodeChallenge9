@@ -14,9 +14,8 @@
     THEN a README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
 
     ## Visuals 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v=YC5owdOdwl0" frameborder="0" allowfullscreen></iframe>
+[![Watch Video](https://img.youtube.com/vi/YC5owdOdwl0/0.jpg)](https://www.youtube.com/watch?v=YC5owdOdwl0)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YC5owdOdwl0?si=Cj6equ0i8jXPS8X3" title="readme.md generator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     ## Installation: 
     NPM i 
