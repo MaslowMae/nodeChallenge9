@@ -39,12 +39,12 @@ import('inquirer')
         },
         {
             type: 'input',
-            name: 'Support',
+            name: 'support',
             message: 'Where can people go for help? Who can they reach out to?'
         },
         {
             type: 'input',
-            name: 'Roadmap',
+            name: 'roadmap',
             message: 'list the future possibilities for this projects growth.'
         },
         {
@@ -134,7 +134,7 @@ function generateMarkdown(answers, badge) {
 
     ### Open to contributions? ${answers.contributions}
 
-    ### Project Status: ${answers.ProjectStatus}`;
+    ### Project Status: ${answers.projectStatus}`;
 }
 
 // module.exports = generateMarkdown;
