@@ -14,7 +14,7 @@
     THEN a README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
 
     ## Visuals 
-[![Watch Video](https://img.youtube.com/vi/YC5owdOdwl0?si=a9aCyQ3-JDbPBloB/0.jpg)](https://youtu.be/YC5owdOdwl0?si=a9aCyQ3-JDbPBloB)
+[![Watch Video](https://img.youtube.com/vi/YC5owdOdwl0/0.jpg)](https://youtu.be/YC5owdOdwl0)
 
 
     ## Installation: 
