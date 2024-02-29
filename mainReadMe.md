@@ -3,7 +3,7 @@
 
     ## Description:  
     This is a simple command line application built to prompt for detailed answers that cover what should be in a good read me. 
-
+[Jump to video demo](#video)
     ## Thank you, all who contributed! 
     UCF Bootcamp, Rockstar energy drink and Node.Js File system tutorials. 
 
@@ -12,11 +12,6 @@
     ## Usage 
    " WHEN I am prompted for information about my application
     THEN a README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
-
-    ## Visuals 
-
-[![Watch Video](https://img.youtube.com/vi/YC5owdOdwl0/0.jpg)](https://youtu.be/YC5owdOdwl0)
-
 
     ## Installation: 
     NPM i 
@@ -34,3 +29,7 @@
 
     ### Project Status: 
     Base project completed. 
+
+    ## Demo 
+<a name="video"></a>
+[![Watch Video](https://img.youtube.com/vi/YC5owdOdwl0/0.jpg)](https://youtu.be/YC5owdOdwl0)
