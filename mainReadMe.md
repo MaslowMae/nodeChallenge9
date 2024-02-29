@@ -14,7 +14,9 @@
     THEN a README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
 
     ## Visuals 
-    XXXXXX Add visuals here XXXXXX
+    [Download File](https://drive.google.com/file/d/1CBHO8sjIAf4j3BvYwVRB4_3KyLpiK6-o/view?usp=sharing)
+
+    [Download File](https://drive.google.com/file/d/1CBHO8sjIAf4j3BvYwVRB4_3KyLpiK6-o/export?format=pdf)
 
     ## Installation: 
     NPM i 
